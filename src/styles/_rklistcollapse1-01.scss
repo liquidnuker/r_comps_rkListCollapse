@@ -1,0 +1,31 @@
+// 
+// ==================================================/
+body {
+  @extend %system_normal--300;
+}
+
+.item-id {
+  background-color: #ccc;
+}
+
+// rklc1-01
+// ==================================================/
+.rk_listcollapse1 {
+  header {
+    background-color: #ccc;
+    cursor: pointer;
+  }
+
+  p {
+    @extend %display--inline-block;
+  }
+
+  span {
+    @extend %display--inline-block;
+    @extend %br--4;
+    @extend %padd--4;
+    @extend %font--bold;
+    background-color: #666;
+    color: #fff;
+  }
+}
