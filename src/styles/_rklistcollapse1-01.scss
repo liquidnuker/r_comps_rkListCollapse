@@ -1,31 +1,60 @@
-// 
+// vcListCollapse1
 // ==================================================/
-body {
-  @extend %system_normal--300;
-}
+@mixin rkListCollapse101_theme() {
+  .rkListCollapse101 {
+    header {
+      background-color: #141416;
+    }
 
-.item-id {
-  background-color: #ccc;
-}
+    p {
+      color: #f0f0f0;
+    }
 
-// rklc1-01
-// ==================================================/
-.rk_listcollapse1 {
+    li {
+      background-color: #1c1d22;
+      color: #d5d5d5;
+    }
+
+    .rkListCollapse101_content {
+      background-color: #343437;
+    }
+  }
+
+  .rkListCollapse101_icon {
+    svg {
+      border: 1px solid #000;
+      background-color: #e6e6e6;
+      fill: #be0101;
+    }
+  } 
+}
+@include rkListCollapse101_theme();
+
+.rkListCollapse101 {
   header {
-    background-color: #ccc;
+    @extend %padd--4;
     cursor: pointer;
   }
 
   p {
     @extend %display--inline-block;
+    @extend %font--bold;
+    // vertical-align: middle;
   }
 
-  span {
-    @extend %display--inline-block;
-    @extend %br--4;
-    @extend %padd--4;
-    @extend %font--bold;
-    background-color: #666;
-    color: #fff;
+}
+
+.rkListCollapse101_icon {
+  @extend %display--inline-block;
+  vertical-align: middle;
+  margin-right: 4px;
+  
+  svg {
+    width: 16px;
+    height: 16px;
   }
+}
+
+.rkListCollapse101_content {
+  @extend %padd--4;
 }

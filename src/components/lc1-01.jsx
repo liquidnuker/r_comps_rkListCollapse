@@ -24,7 +24,8 @@ class Rklc1_listItems extends React.Component {
 
       <ul>
       {this.state.items.map((i) =>
-        <li key={i.itemName}>
+        <li className="rkListCollapse101_content" 
+        key={i.itemName}>
           {i.itemName}
         </li>
       )}
@@ -47,11 +48,18 @@ function Rklc1_listToggle(props) {
 function Rklc1_iconToggle(props) {
   if (props.pr_collapse === true) {
     return (
-      <span>-</span>
+      <span className="rkListCollapse101_icon">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path d="M19 13H5v-2h14v2z"/></svg>
+      </span>
     );
   } else {
     return (
-      <span>+</span>
+      <span className="rkListCollapse101_icon">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+      </svg>
+      </span>
     );
   }
 }
@@ -77,10 +85,10 @@ export default class Rklc1_container extends React.Component {
   
   render() {
     return (
-      <nav className="rk_listcollapse1">
+      <nav className="rkListCollapse101">
       <header onClick={() => { this.toggleCollapse() }}>
-      <p>Items:</p>
       <Rklc1_iconToggle pr_collapse={this.state.collapse}/>
+      <p>Items:</p>
       </header>
       <Rklc1_listToggle pr_collapse={this.state.collapse}/>
       </nav>
