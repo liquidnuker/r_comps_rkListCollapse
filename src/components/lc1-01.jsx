@@ -87,10 +87,12 @@ export default class Rklc1_container extends React.Component {
     return (
       <nav className="rkListCollapse101">
       <header onClick={() => { this.toggleCollapse() }}>
-      <Rklc1_iconToggle pr_collapse={this.state.collapse}/>
+      <Rklc1_iconToggle 
+      pr_collapse={this.state.collapse}/>
       <p>Items:</p>
       </header>
-      <Rklc1_listToggle pr_collapse={this.state.collapse}/>
+      <Rklc1_listToggle 
+      pr_collapse={this.state.collapse}/>
       </nav>
       );
   }
